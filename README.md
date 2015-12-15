@@ -1,8 +1,10 @@
+##Commands
 ### Testing
 ```
 npm test
 ```
 
+## Dependencies
 ### Express Dependencies
 ```
 express
