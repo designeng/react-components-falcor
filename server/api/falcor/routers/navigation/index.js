@@ -1,7 +1,7 @@
 var Router = require('falcor-router');
 var When = require('when');
 
-var data = {
+var navigationData = {
         names: [
             {name: 'a'},
             {name: 'b'},
@@ -15,10 +15,10 @@ var NamesRouter = Router.createClass([
             get: (pathSet) => {
                 var results = [];
                 pathSet.nameIndexes.forEach(nameIndex => {
-                    if (data.names.length > nameIndex) {
+                    if (navigationData.names.length > nameIndex) {
                         results.push({
                             path: ['names', nameIndex, 'name'],
-                            value: data.names[nameIndex].name
+                            value: navigationData.names[nameIndex].name
                         })
                     }
                 })
@@ -28,9 +28,9 @@ var NamesRouter = Router.createClass([
         {
             route: 'names.length',
             get: () => {
-                // return {path: ['names', 'length'], value: data.names.length}
+                // return {path: ['names', 'length'], value: navigationData.names.length}
                 return When.promise((resolve, reject, notify) => {
-                    setTimeout(() => resolve({path: ['names', 'length'], value: data.names.length}) , 1000);
+                    setTimeout(() => resolve({path: ['names', 'length'], value: navigationData.names.length}) , 1000);
                 })
             }
         },
@@ -40,16 +40,16 @@ var NamesRouter = Router.createClass([
                 console.log(callPath, args);
                 var newName = args[0];
 
-                data.names.push({name: newName})
+                navigationData.names.push({name: newName})
 
                 return [
                     {
-                        path: ['names', data.names.length-1, 'name'],
+                        path: ['names', navigationData.names.length-1, 'name'],
                         value: newName
                     },
                     {
                         path: ['names', 'length'],
-                        value: data.names.length
+                        value: navigationData.names.length
                     }
                 ]
             }
