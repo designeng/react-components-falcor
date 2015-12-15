@@ -2,7 +2,6 @@
   "name": "react-components-falcor",
   "version": "1.0.0",
   "description": "",
-  "main": "karma.conf.js",
   "scripts": {
     "build": "webpack -w --config webpack.config.js",
     "test": "karma start",
