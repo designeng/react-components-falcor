@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 
 import Application from '../../src/application';
 
+// TODO: root -> this (mocha, es6 ?)
 let root = {}
 
 describe('components rendering',  () => {
@@ -17,5 +18,5 @@ describe('components rendering',  () => {
     it('should render application',  () => {
         ReactDom.render(<Application />, root._rootElement);
         assert.equal(document.querySelector('header').innerHTML, 'Navigation Component');
-    }); 
+    });
 });
