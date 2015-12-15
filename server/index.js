@@ -4,8 +4,8 @@ var io = require('socket.io')(server);
 
 server.listen(9090, err => {
     if (err) {
-        console.error(err)
-        return
+        console.error(err);
+        return;
     }
-    console.log('navigate to http://localhost:9090')
+    console.log('navigate to http://localhost:9090');
 });
