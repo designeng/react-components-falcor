@@ -1,6 +1,6 @@
 ###Commands
 
-#### Build project
+#### Building
 ```
 npm run build
 ```
@@ -8,6 +8,11 @@ npm run build
 #### Testing
 ```
 npm test
+```
+
+#### Start server
+```
+npm start
 ```
 
 ### Dependencies
