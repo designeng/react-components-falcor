@@ -13,7 +13,7 @@ export default class NavigationSection extends React.Component {
     render() {
         var items = Object.keys(this.state.items).map(idx => {
             return <li key={idx} className="nav-mobile-item">
-                <a className="nav-mobile-item__link" href={this.state.items[idx].href} >
+                <a className="nav-mobile-item__link" href={"#" + this.state.items[idx].href} >
                     {this.state.items[idx].name}
                 </a></li>
         });
