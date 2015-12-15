@@ -1,17 +1,21 @@
 import React from 'react';
-// import mocha from 'mocha';
-// import NameManager from '../../src/name-manager.jsx';
+import ReactDom from 'react-dom';
 
-describe('A',  () => {
-    beforeEach( function () {
-        console.log("TEST beforeEach STARTED");
-        // global.document = jsdom.jsdom();
-        // global.window = document.parentWindow;
-    });
+import Application from '../../src/application';
 
-    it('B',  () => {
-        console.log("TEST STARTED");
-        // React.render(React.createElement(NameManager), document.body);
-        // assert.equal(document.querySelector('p').innerHTML, 'hello');
+let root = {}
+
+describe('components rendering',  () => {
+
+    const before = () => {
+        root._rootElement = document.createElement("div");
+        document.body.appendChild(root._rootElement);
+    }
+
+    beforeEach(before);
+
+    it('should render application',  () => {
+        ReactDom.render(<Application />, root._rootElement);
+        assert.equal(document.querySelector('header').innerHTML, 'Navigation Component');
     }); 
 });

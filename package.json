@@ -5,7 +5,7 @@
   "scripts": {
     "build": "webpack -w --config webpack.config.js",
     "test": "karma start",
-    "start": "node --harmony server"
+    "start": "npm run build & node --harmony server"
   },
   "author": "Denis Savenok denissavenok@gmail.com",
   "license": "ISC",

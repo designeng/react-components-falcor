@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import Navigation from './components/navigation.js';
 
-class Application extends React.Component {
+export default class Application extends React.Component {
     render() {
         return (
             <div>
@@ -11,5 +10,3 @@ class Application extends React.Component {
         )
     }
 }
-
-ReactDom.render(<Application/>, document.querySelector('#application'))

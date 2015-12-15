@@ -3,7 +3,10 @@ import React from 'react';
 export default class Navigation extends React.Component {
     render() {
         return (
-            <div>Navigation Component</div>
+            <nav>
+                <header>Navigation Component</header>
+                <ul></ul>
+            </nav>
         )
     }
 }
