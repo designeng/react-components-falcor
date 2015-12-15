@@ -3,6 +3,17 @@
 npm test
 ```
 
+### Express Dependencies
+```
+express
+body-parser
+```
+
+### Socket.io Dependencies
+```
+socket.io
+```
+
 ### Falcor Dependencies
 ```
 falcor
