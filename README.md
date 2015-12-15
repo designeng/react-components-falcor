@@ -1,4 +1,10 @@
 ###Commands
+
+#### Build project
+```
+npm run build
+```
+
 #### Testing
 ```
 npm test
