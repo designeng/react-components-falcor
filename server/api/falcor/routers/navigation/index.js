@@ -1,59 +1,37 @@
 var Router = require('falcor-router');
-var When = require('when');
 
-var navigationData = {
-        names: [
-            {name: 'a'},
-            {name: 'b'},
-            {name: 'c'}
-        ]
-    };
+var items = [
+    {name: "Acura", href: "/acura/"}, 
+    {name: "Nissan", href: "/nissan/"},
+    {name: "Ford" , href: "/ford/"}
+];
     
-var NamesRouter = Router.createClass([
+var NavigationRouter = Router.createClass([
         {
-            route: 'names[{integers:nameIndexes}]["name"]',
-            get: (pathSet) => {
-                var results = [];
-                pathSet.nameIndexes.forEach(nameIndex => {
-                    if (navigationData.names.length > nameIndex) {
-                        results.push({
-                            path: ['names', nameIndex, 'name'],
-                            value: navigationData.names[nameIndex].name
-                        })
-                    }
-                })
-                return results
-            }
-        },
-        {
-            route: 'names.length',
+            route: 'items',
             get: () => {
-                // return {path: ['names', 'length'], value: navigationData.names.length}
-                return When.promise((resolve, reject, notify) => {
-                    setTimeout(() => resolve({path: ['names', 'length'], value: navigationData.names.length}) , 1000);
-                })
+                console.log("ITEMS ROUTE::::", items);
+                return {path: ['items'], value: items}
             }
         },
         {
-            route: 'names.add',
+            route: 'items.add',
             call: (callPath, args) => {
                 console.log(callPath, args);
-                var newName = args[0];
-
-                navigationData.names.push({name: newName})
+                var newItem = args[0];
 
                 return [
                     {
-                        path: ['names', navigationData.names.length-1, 'name'],
-                        value: newName
+                        path: ['items', items.length-1],
+                        value: newItem
                     },
                     {
-                        path: ['names', 'length'],
-                        value: navigationData.names.length
+                        path: ['items', 'length'],
+                        value: items.length
                     }
                 ]
             }
         }
     ]);
 
-module.exports = NamesRouter;
+module.exports = NavigationRouter;

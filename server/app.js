@@ -18,6 +18,8 @@ app.use('/navigation/model.json', FalcorServer.dataSourceRoute(() => new Navigat
 app.use('/api', routers);
 /* ---- /API ---- */
 
+app.use(require('json-middleware').middleware());
+
 // static pages
 app.use(express.static('.'));
 

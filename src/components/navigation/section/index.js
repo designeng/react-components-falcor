@@ -1,13 +1,24 @@
 import React from 'react';
+import model from './model';
 
 export default class NavigationSection extends React.Component {
 
+    constructor() {
+        super()
+        this.state = {items: []}
+    }
+
+    update() {
+        model.getValue(['items'])
+            .then(response => {
+                console.log("response.json.items::::", response.json.items);
+                return response;
+            })
+            // .then(response => this.setState({items: response.json.items}))
+    }
+
     componentWillMount() {
-        this.setState({items: [
-            {name: "Acura", href: "/acura/"}, 
-            {name: "Nissan", href: "/nissan/"}, 
-            {name: "Ford" , href: "/ford/"}
-        ]});
+        this.update();
     }
 
     render() {

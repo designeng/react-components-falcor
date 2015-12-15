@@ -17,6 +17,7 @@
     "falcor-express": "git://github.com/designeng/falcor-express.git#request-to-context-check-array",
     "falcor-http-datasource": "0.1.2",
     "falcor-router": "0.2.9",
+    "json-middleware": "^1.0.2",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "when": "^3.7.5"
