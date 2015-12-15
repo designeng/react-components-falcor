@@ -23,6 +23,14 @@ falcor-router
 falcor-http-datasource
 ```
 
+### ES6 Dependencies
+```
+babel-core
+babel-loader
+babel-preset-es2015
+babel-preset-stage-0
+```
+
 ### Building Dependencies
 ```
 webpack
