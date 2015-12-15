@@ -7,7 +7,7 @@ module.exports = function (config) {
     // // karma only needs to know about the test bundle
     files: [
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
-      'tests.bundle.js'
+      './test/tests.bundle.js'
     ],
 
     frameworks: [ 'chai', 'mocha' ],
@@ -23,7 +23,7 @@ module.exports = function (config) {
 
     // run the bundle through the webpack and sourcemap plugins
     preprocessors: {
-      'tests.bundle.js': [ 'webpack', 'sourcemap' ]
+      './test/tests.bundle.js': [ 'webpack', 'sourcemap' ]
     },
 
     reporters: [ 'dots', 'osx' ],
