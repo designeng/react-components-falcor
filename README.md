@@ -1,23 +1,23 @@
-##Commands
-### Testing
+###Commands
+#### Testing
 ```
 npm test
 ```
 
-## Dependencies
-### Express Dependencies
+### Dependencies
+#### Express Dependencies
 ```
 express
 body-parser
 ```
 
-### Socket.io Dependencies
+#### Socket.io Dependencies
 ```
 socket.io
 socket.io-client
 ```
 
-### Falcor Dependencies
+#### Falcor Dependencies
 ```
 falcor
 falcor-express
@@ -25,7 +25,7 @@ falcor-router
 falcor-http-datasource
 ```
 
-### ES6 Dependencies
+#### ES6 Dependencies
 ```
 babel-core
 babel-loader
@@ -33,12 +33,12 @@ babel-preset-es2015
 babel-preset-stage-0
 ```
 
-### Building Dependencies
+#### Building Dependencies
 ```
 webpack
 ```
 
-### Test Harness Dependencies
+#### Test Harness Dependencies
 ```
 chai
 karma
