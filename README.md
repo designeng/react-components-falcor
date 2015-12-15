@@ -40,6 +40,7 @@ falcor-http-datasource
 ```
 babel-core
 babel-loader
+babel-preset-react
 babel-preset-es2015
 babel-preset-stage-0
 ```
