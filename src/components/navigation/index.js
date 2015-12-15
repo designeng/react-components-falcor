@@ -1,11 +1,11 @@
 import React from 'react';
+import NavigationSection from './section';
 
 export default class Navigation extends React.Component {
     render() {
         return (
             <nav>
-                <header>Navigation Component</header>
-                <ul></ul>
+                <NavigationSection />
             </nav>
         )
     }
