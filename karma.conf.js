@@ -42,11 +42,6 @@ module.exports = function (config) {
             query: {
               presets: ['es2015', 'stage-0'],
             }
-          },
-          {
-            exclude: /node_modules/,
-            loader: 'babel',
-            test: /\.jsx?$/
           }
         ],
       },
