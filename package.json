@@ -8,7 +8,7 @@
     "test": "karma start",
     "start": "node --harmony server"
   },
-  "author": "",
+  "author": "Denis Savenok denissavenok@gmail.com",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.1",
