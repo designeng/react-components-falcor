@@ -12,6 +12,7 @@ body-parser
 ### Socket.io Dependencies
 ```
 socket.io
+socket.io-client
 ```
 
 ### Falcor Dependencies
