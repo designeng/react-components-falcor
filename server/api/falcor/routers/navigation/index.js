@@ -1,17 +1,19 @@
 var Router = require('falcor-router');
+var $atom = require('falcor').Model.atom;
 
-var items = [
-    {name: "Acura", href: "/acura/"}, 
-    {name: "Nissan", href: "/nissan/"},
-    {name: "Ford" , href: "/ford/"}
-];
+var data = {
+    items: [
+        {name: "Acura", href: "/acura/"}, 
+        {name: "Nissan", href: "/nissan/"},
+        {name: "Ford" , href: "/ford/"}
+    ]
+};
     
 var NavigationRouter = Router.createClass([
         {
-            route: 'items',
-            get: () => {
-                console.log("ITEMS ROUTE::::", items);
-                return {path: ['items'], value: items}
+            route: "items",
+            get: function() {
+                return {path:["items"], value: $atom(data.items)};
             }
         },
         {

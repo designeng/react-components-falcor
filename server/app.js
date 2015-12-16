@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 /* ---- API ---- */
 // falcor models
-app.use('/navigation/model.json', FalcorServer.dataSourceRoute(() => new NavigationRouter()));
+app.use('/navigation/model.json',   FalcorServer.dataSourceRoute(() => new NavigationRouter()));
 
 // express routers
 app.use('/api', routers);

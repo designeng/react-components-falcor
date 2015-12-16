@@ -8,17 +8,9 @@ export default class NavigationSection extends React.Component {
         this.state = {items: []}
     }
 
-    update() {
-        model.getValue(['items'])
-            .then(response => {
-                console.log("response.json.items::::", response.json.items);
-                return response;
-            })
-            // .then(response => this.setState({items: response.json.items}))
-    }
-
     componentWillMount() {
-        this.update();
+        model.getValue(['items'])
+            .then(response => this.setState({items: response}))
     }
 
     render() {
