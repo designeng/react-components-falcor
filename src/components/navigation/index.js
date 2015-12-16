@@ -5,7 +5,8 @@ export default class Navigation extends React.Component {
     render() {
         return (
             <nav>
-                <NavigationSection />
+                <NavigationSection itemsType="items"/>
+                <NavigationSection itemsType="brands"/>
             </nav>
         )
     }

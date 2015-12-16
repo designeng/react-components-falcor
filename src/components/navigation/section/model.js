@@ -5,4 +5,4 @@ var model = new Falcor.Model({
     source: new FalcorDataSource('/navigation/model.json')
 });
 
-module.exports = model
+module.exports = model;

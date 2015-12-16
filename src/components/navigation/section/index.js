@@ -9,7 +9,9 @@ export default class NavigationSection extends React.Component {
     }
 
     componentWillMount() {
-        model.getValue(['items'])
+        var {itemsType} = this.props;
+        
+        model.getValue([itemsType])
             .then(response => this.setState({items: response}))
     }
 
