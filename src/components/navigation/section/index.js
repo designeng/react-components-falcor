@@ -3,6 +3,8 @@ import model from './model';
 
 export default class NavigationSection extends React.Component {
 
+    // static propTypes = {itemsType: React.PropTypes.string}
+
     constructor() {
         super()
         this.state = {items: []}
