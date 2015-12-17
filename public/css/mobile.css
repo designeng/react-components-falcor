@@ -14,6 +14,7 @@
 
     a {
         color: rgb(68, 84, 111);
+        text-decoration: none;
     }
 
     a,
@@ -279,4 +280,17 @@
     .top-news-item .top-news-item__caption {
         width: auto;
         padding: 12px 24px;
+    }
+
+    .wrap {
+        display: table;
+        width: 100%;
+    }
+    .cell {
+        display: table-cell;
+        height: 3rem;
+        vertical-align: middle;
+    }
+    .caption-wrapper {
+        text-decoration: none;
     }

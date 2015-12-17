@@ -21,10 +21,11 @@ export default class NewsList extends React.Component {
 
     render() {
         const newsListClass     = "top-news-list top-news-list_flipping";
-        const aClass            = "top-news-item ncard ncard-big ncard-shr";
-        const imgWrapperClass   = "image-wrapper image-wrapper_big";
+        const aClass            = "top-news-item wrap";
+        const imgWrapperClass   = "image-wrapper image-wrapper_big cell";
         const imgClass          = "top-news-item__image";
-        const captionClass      = "top-news-item__caption";
+        const captionClass      = "top-news-item__caption cell";
+        const spanClass         = "caption-wrapper";
 
         const noopLink          = "#/drive-test/";
 
@@ -33,7 +34,7 @@ export default class NewsList extends React.Component {
                         <div className={imgWrapperClass}>
                             <img className={imgClass} src={this.state.items[idx].img} width="460" height="260" alt="" ></img>
                         </div>
-                        <strong className={captionClass}>{this.state.items[idx].caption}</strong>
+                        <div className={captionClass}><span className={spanClass}>{this.state.items[idx].caption}</span></div>
                     </a>
         });
 

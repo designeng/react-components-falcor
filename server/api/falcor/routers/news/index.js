@@ -12,10 +12,10 @@ var images = [
 
 var captions = [
     "Ищем доброту внутри водородомобиля Toyota Mirai",
-    "Компания Opel покажет в&nbsp;Женеве наследника исторической модели GT",
-    "В&nbsp;Москве будет введён запрет на&nbsp;топливо ниже Евро-5",
-    "Концептом h-tron quattro Audi намекнёт на&nbsp;вариант кроссовера Q6",
-    "Зовём Cayenne рассудить BMW X5 M и&nbsp;Range Rover Sport SVR"
+    "Компания Opel покажет в Женеве наследника исторической модели GT",
+    "В Москве будет введён запрет на топливо ниже Евро-5",
+    "Концептом h-tron quattro Audi намекнёт на вариант кроссовера Q6",
+    "Зовём Cayenne рассудить BMW X5 M и Range Rover Sport SVR"
 ]
 
 var top = (function (images, captions) {
