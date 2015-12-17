@@ -6,7 +6,7 @@
     "build": "webpack -w --config webpack.config.js",
     "test": "karma start",
     "test-api": "./node_modules/mocha/bin/mocha test/api/falcor/models/index.js",
-    "start": "npm run build & node --harmony server"
+    "start": "node server"
   },
   "author": "Denis Savenok denissavenok@gmail.com",
   "license": "ISC",

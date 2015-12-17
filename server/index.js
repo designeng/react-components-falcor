@@ -2,10 +2,13 @@ var app = require('./app');
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-server.listen(9090, err => {
+app.set('port', process.env.PORT || 8080);
+var port = app.get('port');
+
+server.listen(port, err => {
     if (err) {
         console.error(err);
         return;
     }
-    console.log('navigate to http://localhost:9090');
+    console.log('navigate to http://localhost:' + port);
 });
