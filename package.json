@@ -6,12 +6,13 @@
     "build": "webpack -w --config webpack.config.js",
     "test": "karma start",
     "test-api": "./node_modules/mocha/bin/mocha test/api/falcor/models/index.js",
-    "start": "node server/index.js"
+    "start": "npm run build & node --harmony server"
   },
   "author": "Denis Savenok denissavenok@gmail.com",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "classnames": "^2.2.1",
     "express": "^4.13.3",
     "falcor": "0.1.13",
     "falcor-express": "git://github.com/designeng/falcor-express.git#request-to-context-check-array",
