@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { render } from 'react-dom';
 import Application from './application';
 
-ReactDom.render(<Application />, document.querySelector('#application'));
+render(<Application />, document.querySelector('#application'));
