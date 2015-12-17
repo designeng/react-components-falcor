@@ -9,12 +9,14 @@ var getResponseBody = function (response) {
 }
 
 describe('navigation model', function () {
+    var path = '/navigation/model.json';
+
     beforeEach(function () {
 
     });
 
-    it('/navigation/model.json path exists, should accept get request and "items" path should return array with 3 elements', function (done) {
-        apitest.get('/navigation/model.json?paths=[["items"]]&method=get')
+    it(path + ' path exists, should accept get request and "items" path should return array with 3 elements', function (done) {
+        apitest.get(path + '?paths=[["items"]]&method=get')
             .expect(200)
             .end((error, response) => {
                 if (error) return done(error);
@@ -23,8 +25,8 @@ describe('navigation model', function () {
             });
     });
 
-    it('/navigation/model.json "brands" path should return array with 3 elements', function (done) {
-        apitest.get('/navigation/model.json?paths=[["brands"]]&method=get')
+    it(path + ' "brands" path should return array with 3 elements', function (done) {
+        apitest.get(path + '?paths=[["brands"]]&method=get')
             .expect(200)
             .end((error, response) => {
                 if (error) return done(error);
@@ -33,13 +35,13 @@ describe('navigation model', function () {
             });
     });
 
-    xit('/navigation/model.json post should throw 500 error without args', function (done) {
-        apitest.post('/navigation/model.json')
+    xit(path + ' post should throw 500 error without args', function (done) {
+        apitest.post(path)
             .expect(500, done);
     });
 
-    xit('/navigation/model.json should accept post request', function (done) {
-        apitest.post('/navigation/model.json')
+    xit(path + ' should accept post request', function (done) {
+        apitest.post(path)
             .send({ 
                 method    : 'call', 
                 callPath  : ['names','add'],
