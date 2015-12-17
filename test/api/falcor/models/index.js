@@ -8,7 +8,7 @@ var getResponseBody = function (response) {
     return JSON.parse(response.text)['jsonGraph']
 }
 
-describe('integration', function () {
+describe('navigation model', function () {
     beforeEach(function () {
 
     });
@@ -46,5 +46,23 @@ describe('integration', function () {
                 arguments : ['1234567']
             })
             .expect(200, done);
+    });
+});
+
+describe('news model', function () {
+    var path = '/news/model.json';
+
+    beforeEach(function () {
+
+    });
+
+    it(path + ' path exists, should accept get request and "items" request should return array with 5 elements', function (done) {
+        apitest.get(path + '?paths=[["top"]]&method=get')
+            .expect(200)
+            .end((error, response) => {
+                if (error) return done(error);
+                assert.equal(getResponseBody(response)['top']['value'].length, 5);
+                done();
+            });
     });
 });

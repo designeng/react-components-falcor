@@ -3,7 +3,10 @@ var bodyParser = require('body-parser');
 var app = express();
 
 var FalcorServer = require('falcor-express');
-var NavigationRouter = require('./api/falcor/routers/navigation');
+
+/* ---- import falcor routers ---- */
+var NavigationRouter    = require('./api/falcor/routers/navigation');
+var NewsRouter          = require('./api/falcor/routers/news');
 
 var routers = require('./api/express/routers/index');
 
@@ -11,10 +14,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 /* ---- API ---- */
-// falcor models
+// falcor models api
 app.use('/navigation/model.json',   FalcorServer.dataSourceRoute(() => new NavigationRouter()));
+app.use('/news/model.json',         FalcorServer.dataSourceRoute(() => new NewsRouter()));
 
-// express routers
+// express routers api
 app.use('/api', routers);
 /* ---- /API ---- */
 

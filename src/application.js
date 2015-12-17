@@ -7,7 +7,7 @@ export default class Application extends React.Component {
         return (
             <div>
                 <Navigation />
-                <NewsList />
+                <NewsList type="top" />
             </div>
         )
     }

@@ -4,7 +4,7 @@ import model from './model';
 export default class NewsList extends React.Component {
 
     static propTypes = {
-        itemsType: React.PropTypes.string
+        type: React.PropTypes.string
     }
 
     constructor() {
@@ -13,9 +13,9 @@ export default class NewsList extends React.Component {
     }
 
     componentWillMount() {
-        var {itemsType} = this.props;
+        var {type} = this.props;
         
-        model.getValue([itemsType])
+        model.getValue([type])
             .then(response => this.setState({items: response}))
     }
 
@@ -29,14 +29,14 @@ export default class NewsList extends React.Component {
         const noopLink          = "#/drive-test/";
 
         let items = Object.keys(this.state.items).map(idx => {
-            return  <a href={noopLink} className={aClass}>
-                        <div class={imgWrapperClass}>
-                            <img class={imgClass} src={this.state.items[idx].img} width="460" height="260" alt="" ></img>
+            return  <a key={idx} href={noopLink} className={aClass}>
+                        <div className={imgWrapperClass}>
+                            <img className={imgClass} src={this.state.items[idx].img} width="460" height="260" alt="" ></img>
                         </div>
-                        <strong class={captionClass}>{this.state.items[idx].caption}</strong>
+                        <strong className={captionClass}>{this.state.items[idx].caption}</strong>
                     </a>
         });
-        
-        return <div class={newsListClass}>{items}</div>
+
+        return <div className={newsListClass}>{items}</div>
     }
 }

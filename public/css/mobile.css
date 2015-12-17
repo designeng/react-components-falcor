@@ -1,4 +1,4 @@
-@media screen and (max-width: 800px) {
+
 
     /* Global overrides */
 
@@ -180,7 +180,7 @@
         z-index: 4;
         width: 21px;
         height: 21px;
-        background: url(/images/menu_trigger.svg) 0 0 no-repeat;
+        background: url(https://www.drive.ru/images/menu_trigger.svg) 0 0 no-repeat;
         background-size: contain;
     }
         .nav-mobile-trigger:checked ~ .nav-mobile-trigger-label {
@@ -272,4 +272,3 @@
         width: auto;
         padding: 12px 24px;
     }
-}
