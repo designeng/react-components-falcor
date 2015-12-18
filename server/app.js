@@ -25,7 +25,7 @@ app.use('/api', routers);
 app.use(require('json-middleware').middleware());
 
 // static pages
-app.use(express.static('.'));
+app.use(express.static('./public'));
 
 /* 404 */
 app.use(function(req, res, next) {
