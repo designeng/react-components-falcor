@@ -6,6 +6,7 @@
 + socket.io - falcor model cache interaction
 + react-redux integration
 + run all tests with single command
++ es6/7 linter
 
 ###Commands
 
