@@ -4,6 +4,7 @@
 + css-modules (less/sass/etc)
 + isomorphic-way
 + socket.io - falcor model cache interaction
++ react-redux integration
 + run all tests with single command
 
 ###Commands
