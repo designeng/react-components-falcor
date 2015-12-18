@@ -76,3 +76,8 @@ mocha
 phantomjs
 phantomjs-polyfill
 ```
+
+#### Utils Dependencies
+```
+lodash
+```
