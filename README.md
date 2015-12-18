@@ -16,6 +16,7 @@ npm run build
 #### Testing
 ```
 npm test
+npm run test-api
 ```
 
 #### Start server
