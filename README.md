@@ -1,3 +1,11 @@
+###TODO
++ connectData decorator
++ webpack livereload
++ css-modules (less/sass/etc)
++ isomorphic-way
++ socket.io - falcor model cache interaction
++ run all tests with single command
+
 ###Commands
 
 #### Building
