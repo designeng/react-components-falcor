@@ -5,7 +5,7 @@ module.exports = function (config) {
     browsers: [ 'PhantomJS' ],
 
     files: [
-      './../../node_modules/phantomjs-polyfill/bind-polyfill.js',
+      './../../../node_modules/phantomjs-polyfill/bind-polyfill.js',
       './tests.bundle.js'
     ],
 
