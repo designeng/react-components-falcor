@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack -w --config webpack.config.js",
+    "build": "webpack --watch --config webpack.config.js",
     "test": "karma start",
     "test-api": "./node_modules/mocha/bin/mocha test/api/falcor/models/index.js",
     "start": "npm run build & node --harmony server"
@@ -47,6 +47,7 @@
     "phantomjs": "^1.9.19",
     "phantomjs-polyfill": "0.0.1",
     "supertest": "^1.1.0",
-    "webpack": "^1.12.9"
+    "webpack": "^1.12.9",
+    "webpack-livereload-plugin": "^0.4.0"
   }
 }
