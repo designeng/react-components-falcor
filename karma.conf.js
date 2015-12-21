@@ -4,7 +4,6 @@ module.exports = function (config) {
   config.set({
     browsers: [ 'PhantomJS' ],
 
-    // // karma only needs to know about the test bundle
     files: [
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
       './test/tests.bundle.js'
