@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "webpack --watch --config webpack.config.js",
-    "test": "karma start",
+    "test": "karma start test/config/karma.conf.js",
     "test-api": "./node_modules/mocha/bin/mocha test/api/falcor/models/index.js",
     "start": "npm run build & node --harmony server"
   },

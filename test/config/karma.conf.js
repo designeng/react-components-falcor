@@ -5,8 +5,8 @@ module.exports = function (config) {
     browsers: [ 'PhantomJS' ],
 
     files: [
-      './node_modules/phantomjs-polyfill/bind-polyfill.js',
-      './test/tests.bundle.js'
+      './../../node_modules/phantomjs-polyfill/bind-polyfill.js',
+      './tests.bundle.js'
     ],
 
     frameworks: [ 'chai', 'mocha' ],
@@ -22,7 +22,7 @@ module.exports = function (config) {
 
     // run the bundle through the webpack and sourcemap plugins
     preprocessors: {
-      './test/tests.bundle.js': [ 'webpack', 'sourcemap' ]
+      './tests.bundle.js': [ 'webpack', 'sourcemap' ]
     },
 
     reporters: [ 'dots', 'osx' ],
