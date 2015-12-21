@@ -17,6 +17,6 @@ describe('components rendering',  () => {
 
     it('should render application',  () => {
         ReactDom.render(<Application />, root._rootElement);
-        assert.equal(document.querySelector('header').innerHTML, 'Navigation Component');
+        assert.equal(document.querySelector('#app-wrapper').innerHTML, 'Navigation Component');
     });
 });

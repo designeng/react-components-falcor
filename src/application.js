@@ -5,7 +5,7 @@ import NewsList     from './components/news';
 export default class Application extends React.Component {
     render() {
         return (
-            <div>
+            <div id="app-wrapper">
                 <Navigation />
                 <NewsList type="top" />
             </div>
