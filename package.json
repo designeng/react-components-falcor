@@ -21,7 +21,8 @@
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
-    "when": "^3.7.5"
+    "when": "^3.7.5",
+    "connect-data-decorator": "git://github.com/designeng/connect-data-decorator#v0.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
