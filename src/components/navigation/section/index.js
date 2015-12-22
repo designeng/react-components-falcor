@@ -1,6 +1,9 @@
 import React from 'react';
-import model from './model';
+import connectModel from 'connect-data-decorator';
 
+@connectModel({
+    sourcePath: '/navigation/model.json'
+})
 export default class NavigationSection extends React.Component {
 
     static propTypes = {
@@ -15,7 +18,7 @@ export default class NavigationSection extends React.Component {
     componentWillMount() {
         var {itemsType} = this.props;
         
-        model.getValue([itemsType])
+        this.context.model.getValue([itemsType])
             .then(response => this.setState({items: response}))
     }
 
