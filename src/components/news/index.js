@@ -1,6 +1,9 @@
 import React from 'react';
-import model from './model';
+import connectModel from 'connect-data-decorator';
 
+@connectModel({
+    sourcePath: '/news/model.json'
+})
 export default class NewsList extends React.Component {
 
     static propTypes = {
@@ -15,7 +18,7 @@ export default class NewsList extends React.Component {
     componentWillMount() {
         var {type} = this.props;
         
-        model.getValue([type])
+        this.context.model.getValue([type])
             .then(response => this.setState({items: response}))
     }
 
