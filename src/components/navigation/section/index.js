@@ -1,4 +1,6 @@
 import React from 'react';
+import connectModel from 'connect-data-decorator';
+
 import model from './model';
 
 export default class NavigationSection extends React.Component {
