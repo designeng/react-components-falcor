@@ -5,6 +5,7 @@
   "scripts": {
     "build": "webpack --watch --config webpack.config.js",
     "karma-browser": "karma start test/config/browser/karma.conf.js",
+    "karma-api": "karma start test/config/api/karma.conf.js",
     "test": "npm run karma-browser",
     "test-api": "./node_modules/mocha/bin/mocha test/api/falcor/models/index.js",
     "start": "npm run build & node --harmony server"
@@ -22,7 +23,8 @@
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
-    "when": "^3.7.5"
+    "when": "^3.7.5",
+    "connect-data-decorator": "git://github.com/designeng/connect-data-decorator#v0.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
