@@ -286,3 +286,7 @@
     .caption-wrapper {
         text-decoration: none;
     }
+
+    span.validator__error {
+        color: red;
+    }

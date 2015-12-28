@@ -12,14 +12,14 @@ export default class LoginForm extends React.Component {
 
     onInputChange(e) {
         this.setState({
-            value: e.target.value
+            login: e.target.value
         });
     }
 
     render () {
         return (
             <Validator
-                value={this.state.value}
+                value={this.state.login}
                 onStart={() => {
                     console.log('Validation start');
                 }}
@@ -28,8 +28,8 @@ export default class LoginForm extends React.Component {
                 }}
                 validators={[
                     {
-                        validator(value, params) {
-                            if (value) {
+                        validator(login, params) {
+                            if (login) {
                                 return Promise.resolve();
                             }
 
@@ -41,7 +41,7 @@ export default class LoginForm extends React.Component {
                     }
                 ]}>
                 <div>
-                    <input type="text" value={this.state.value} onChange={this.onInputChange} />
+                    <input type="text" value={this.state.login} onChange={this.onInputChange} />
                 </div>
             </Validator>
         );
