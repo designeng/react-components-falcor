@@ -34,9 +34,9 @@
     }
 
     html {
-        background: #494949 url(https://www.drive.ru/images/bg.jpg) center top;
-        color: #000;
-        /*background: rgb(74, 90, 116);*/
+        /*background: #494949 url(https://www.drive.ru/images/bg.jpg) center top;*/
+        /*color: #000;*/
+        background: rgb(74, 90, 116);
     }
 
     body {
