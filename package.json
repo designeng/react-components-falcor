@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.14.1",
+    "connect-data-decorator": "git://github.com/designeng/connect-data-decorator#v0.0.2",
     "express": "^4.13.3",
     "falcor": "0.1.13",
     "falcor-express": "git://github.com/designeng/falcor-express.git#request-to-context-check-array",
@@ -23,8 +24,8 @@
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
-    "when": "^3.7.5",
-    "connect-data-decorator": "git://github.com/designeng/connect-data-decorator#v0.0.2"
+    "valya": "^0.2.1",
+    "when": "^3.7.5"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
