@@ -3,7 +3,23 @@ import bindAll      from 'lodash/function/bindAll';
 
 import Validator    from './validator';
 
+var inputValidators = [
+    {
+        validator(login, params) {
+            if (login) {
+                return Promise.resolve();
+            }
+
+            return Promise.reject(params.message);
+        },
+        params: {
+            message: 'Field is required'
+        }
+    }
+];
+
 export default class LoginForm extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {};
@@ -13,7 +29,7 @@ export default class LoginForm extends React.Component {
     onInputChange(e) {
         this.setState({
             login: e.target.value
-        });
+        })
     }
 
     render () {
@@ -26,23 +42,8 @@ export default class LoginForm extends React.Component {
                 onEnd={(isValid, message) => {
                     console.log('validation end:', isValid, message);
                 }}
-                validators={[
-                    {
-                        validator(login, params) {
-                            if (login) {
-                                return Promise.resolve();
-                            }
-
-                            return Promise.reject(params.message);
-                        },
-                        params: {
-                            message: 'Field is required'
-                        }
-                    }
-                ]}>
-                <div>
-                    <input type="text" value={this.state.login} onChange={this.onInputChange} />
-                </div>
+                validators={inputValidators}>
+                <input type="text" value={this.state.login} onChange={this.onInputChange} />
             </Validator>
         );
     }
