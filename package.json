@@ -52,6 +52,8 @@
     "mocha": "^2.3.4",
     "phantomjs": "^1.9.19",
     "phantomjs-polyfill": "0.0.1",
+    "postcss-loader": "^0.8.0",
+    "style-loader": "^0.13.0",
     "supertest": "^1.1.0",
     "webpack": "^1.12.9",
     "webpack-livereload-plugin": "^0.4.0"

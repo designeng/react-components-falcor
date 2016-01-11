@@ -21,7 +21,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('public/css/style.css', { allChunks: true }),
+        new ExtractTextPlugin('public/css/generated-styles.css', { allChunks: true }),
         new LiveReloadPlugin({ port: 8082 })
     ],
     devtool: 'source-map'
