@@ -1,6 +1,8 @@
 import React from 'react';
 import Valya from 'valya';
 
+import styles from './Login.css';
+
 @Valya
 export default class Validator extends React.Component {
     static displayName = 'Validator';
@@ -11,7 +13,7 @@ export default class Validator extends React.Component {
         }
 
         return (
-            <span className="validator__error" key="error">
+            <span className={styles.error} key="error">
                 {this.props.validationErrorMessage}
             </span>
         );
@@ -19,8 +21,8 @@ export default class Validator extends React.Component {
 
     render () {
         return (
-            <span className="validator">
-                <span className="validator__target" key="target">
+            <span className={styles.validator}>
+                <span className={styles.target} key="target">
                     {this.props.children}
                 </span>
                 {this.renderError()}

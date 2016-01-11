@@ -246,8 +246,3 @@
         width: auto;
         padding: 12px 24px;
     }
-
-
-    span.validator__error {
-        color: red;
-    }
