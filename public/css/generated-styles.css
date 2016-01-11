@@ -11,5 +11,34 @@
     display: block;
     color: rgb(255, 255, 255);
     -webkit-tap-highlight-color: initial;
+}.News__list___4i24S {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #fff;
+}
+
+.News__link___hzTGh {
+    width: auto;
+    height: auto;
+    background: inherit;
+
+    display: table;
+    width: 100%;
+}
+
+.News__cellImage___XsB06 {
+    width: 230px;
+    height: 130px;
+}
+
+.News__cell___YJLpO {
+    display: table-cell;
+    height: 3rem;
+    vertical-align: middle;
+}
+
+.News__caption___1vZiD {
+
 }
 /*# sourceMappingURL=generated-styles.css.map*/

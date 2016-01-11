@@ -240,42 +240,13 @@
             background: rgb(231, 232, 233);
         }
 
-    /* ------ top-news ------ */
-    .top-news-list {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        background-color: #fff;
-    }
 
-    .top-news-item {
-        width: auto;
-        height: auto;
-        background: inherit;
-    }
-
-    .top-news-item__image {
-        width: 230px;
-        height: 130px;
-    }
 
     .top-news-item .top-news-item__caption {
         width: auto;
         padding: 12px 24px;
     }
 
-    .wrap {
-        display: table;
-        width: 100%;
-    }
-    .cell {
-        display: table-cell;
-        height: 3rem;
-        vertical-align: middle;
-    }
-    .caption-wrapper {
-        text-decoration: none;
-    }
 
     span.validator__error {
         color: red;
