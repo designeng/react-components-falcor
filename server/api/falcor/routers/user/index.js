@@ -13,7 +13,7 @@ var UserRouter = Router.createClass([
                 }
             });
 
-            // TODO: not sure we showld return smth
+            // TODO: not sure we should return smth
             return {path:["login"], value: user.login};
         }
     }

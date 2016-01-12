@@ -50,7 +50,7 @@ export default class LoginForm extends React.Component {
 
         this.context.model.setValue('login', this.state.login)
             .then(response => {
-                console.log("RESPONSE::::", response);
+                console.log("LOGIN RESPONSE::::", response);
             })
     }
 
