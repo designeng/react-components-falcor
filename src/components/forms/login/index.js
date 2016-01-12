@@ -60,7 +60,7 @@ export default class LoginForm extends React.Component {
                 onEnd    ={this.onValidationEnd}
                 validators={inputValidators}>
                 <input type="text" value={this.state.login} onChange={this.onInputChange} />
-                <input type="button" onClick={this.onEnter} disabled={!this.state.login}/>
+                <input type="button" onClick={this.onEnter} disabled={!this.state.login} />
             </Validator>
         );
     }
