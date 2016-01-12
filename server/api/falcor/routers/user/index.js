@@ -1,12 +1,20 @@
 var Router = require('falcor-router');
-
-var $atom = require('falcor').Model.atom;
+var User = require('../../../../models/user');
 
 var UserRouter = Router.createClass([
     {
         route: "login",
-        get: function() {
-            return {path:["top"], value: $atom(top)};
+        set: function(user) {
+            new User({
+                login: user.login
+            }).save(function(err) {
+                if(err) {
+                    console.log("ERROR USER MODEL [SET LOGIN]: ", err);
+                }
+            });
+
+            // TODO: not sure we showld return smth
+            return {path:["login"], value: user.login};
         }
     }
 ]);

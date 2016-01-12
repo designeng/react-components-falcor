@@ -27,15 +27,28 @@ export default class LoginForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-        bindAll(this, ["onInputChange"]);
+        bindAll(this, ['onInputChange', 'onEnter']);
+    }
+
+    onValidationStart() {}
+
+    onValidationEnd(isValid, message) {
+        console.log('validation end:', isValid, message);
+        if (isValid) {
+
+        }
     }
 
     onInputChange(e) {
         this.setState({
             login: e.target.value
         })
+    }
 
-        this.context.model.setValue(e.target.value)
+    onEnter() {
+        console.log("onEnter....", this.state.login);
+
+        this.context.model.setValue('login', this.state.login)
             .then(response => {
                 console.log("RESPONSE::::", response);
             })
@@ -45,14 +58,11 @@ export default class LoginForm extends React.Component {
         return (
             <Validator
                 value={this.state.login}
-                onStart={() => {
-                    console.log('Validation start');
-                }}
-                onEnd={(isValid, message) => {
-                    console.log('validation end:', isValid, message);
-                }}
+                onStart  ={this.onValidationStart}
+                onEnd    ={this.onValidationEnd}
                 validators={inputValidators}>
                 <input type="text" value={this.state.login} onChange={this.onInputChange} />
+                <input type="button" onClick={this.onEnter} disabled={!this.state.login}/>
             </Validator>
         );
     }
