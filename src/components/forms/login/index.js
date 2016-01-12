@@ -46,8 +46,6 @@ export default class LoginForm extends React.Component {
     }
 
     onEnter() {
-        console.log("onEnter....", this.state.login);
-
         this.context.model.setValue('login', this.state.login)
             .then(response => {
                 console.log("LOGIN RESPONSE::::", response);
