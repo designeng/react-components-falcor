@@ -1,5 +1,6 @@
 import React        from 'react';
 import bindAll      from 'lodash/function/bindAll';
+import connectModel from 'connect-data-decorator';
 
 import Validator    from './validator';
 
@@ -18,6 +19,9 @@ var inputValidators = [
     }
 ];
 
+@connectModel({
+    sourcePath: '/user/model.json'
+})
 export default class LoginForm extends React.Component {
 
     constructor(props) {
@@ -30,6 +34,11 @@ export default class LoginForm extends React.Component {
         this.setState({
             login: e.target.value
         })
+
+        this.context.model.setValue(e.target.value)
+            .then(response => {
+                console.log("RESPONSE::::", response);
+            })
     }
 
     render () {
