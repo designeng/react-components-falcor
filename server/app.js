@@ -7,6 +7,7 @@ var FalcorServer = require('falcor-express');
 /* ---- import falcor routers ---- */
 var NavigationRouter    = require('./api/falcor/routers/navigation');
 var NewsRouter          = require('./api/falcor/routers/news');
+var UserRouter          = require('./api/falcor/routers/user');
 
 var routers = require('./api/express/routers/index');
 
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // falcor models api
 app.use('/navigation/model.json',   FalcorServer.dataSourceRoute(() => new NavigationRouter()));
 app.use('/news/model.json',         FalcorServer.dataSourceRoute(() => new NewsRouter()));
+app.use('/user/model.json',         FalcorServer.dataSourceRoute(() => new UserRouter()));
 
 // express routers api
 app.use('/api', routers);
