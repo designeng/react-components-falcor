@@ -9,8 +9,6 @@ var port = app.get('port');
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-    console.log("CONNECTED");
-    
     server.listen(port, err => {
         if (err) {
             console.error(err);
